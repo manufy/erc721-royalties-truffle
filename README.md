@@ -13,11 +13,11 @@ Openzeppelin smart contracts lib:
 
 ## Compile smart contracts
 
-truffle compile
+- truffle compile
 
 # Build and test
 
-- truffle develop 
+- truffle develop -> to enter dev console
   - migrate -> to compile smart contracts
   - let token = await AssetERC721.deployed();
   - token. -> TAB -> to see autocompletion

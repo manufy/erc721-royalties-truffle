@@ -6,8 +6,8 @@ truffle compile
 
 ## prerequisites
 
-  npm i -g truffle
-  download openzeppelin contracts
+  - npm i -g truffle
+  - download openzeppelin contracts
 # Build and test
 
 truffle develop 

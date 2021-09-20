@@ -60,4 +60,10 @@ Rarible protocol contracts: @rarible/royalties/contracts (update local if new ve
  - result
  - result[1].toString()
 
+# URI
+ 
+ - let token = await AssetERC721.deployed();
+ - token.mint(accounts[0])
+ - token.tokenURI(0)
+ 
 

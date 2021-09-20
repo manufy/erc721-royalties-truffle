@@ -24,6 +24,12 @@ contract ("ERC721 with Royalties", accounts => {
         assert.equal(royalties.receiver, deployerAddress);
     });
 
+    it ("returns URI", async() => { 
+        let token = await AssetERC721.deployed();
+        await token.mint(tokenAddr1);
+        // assert.equal(token.tokenURI(0),'https://mfy.es')
+    });
+
     
 
    

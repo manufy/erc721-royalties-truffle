@@ -49,4 +49,10 @@ contract AssetERC721 is ERC721, Ownable, RoyaltiesV2Impl {
         }
         return super.supportsInterface(interfaceId);
     }
+
+    // Add NFT JSON URI
+
+    function _baseURI() internal view virtual override returns (string memory) {
+        return "https://mfy.es";
+    }
 }

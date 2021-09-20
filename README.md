@@ -23,7 +23,7 @@ Rarible protocol contracts: @rarible/royalties/contracts (update local if new ve
 
 - truffle compile
 
-# Build and test
+# Build and test ERC721 Ownable token
 
 - truffle develop -> to enter dev console
   - migrate -> to compile & deploy smart contracts
@@ -36,5 +36,15 @@ Rarible protocol contracts: @rarible/royalties/contracts (update local if new ve
   - accounts -> list accounts
   - token.mint(accounts[0]) -> mint token at address[0] 
   - (await token.balanceOf(accounts[0])).toNumber() -> check balance at address[0]
-  -
+
+# Build and test ERC721 Rarible token
+
+ - let token_royalties = await AssetERC721.deployed();
+ - token_royalties.mint(accounts[0])
+ - token_royalties.setRoyalties(0,accounts[0],10000); -> 10% royalties
+ - token_royalties.getRaribleV2Royalties(0);
+ - token_royalties.supportsInterface("0xcad96cca")
+
+ https://eips.ethereum.org/EIPS/eip-2981
+
 

@@ -14,6 +14,8 @@ contract AssetERC721 is ERC721, Ownable, RoyaltiesV2Impl {
 
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIdTracker;
+
+    bytes4 private constant _INTERFACE_ID_ERC2981 = 0x2a55205a;
     constructor() ERC721("Minimal","MIN") {}
 
     function mint(address _to) public onlyOwner {
@@ -21,9 +23,9 @@ contract AssetERC721 is ERC721, Ownable, RoyaltiesV2Impl {
         _tokenIdTracker.increment();
         }
 
-    function setRoyalties(uint _tokenId, address payable _royaltiesRecipientAddress, uint96 _peercentageBasisPoints ) public onlyOwner {
+    function setRoyalties(uint _tokenId, address payable _royaltiesRecipientAddress, uint96 _percentageBasisPoints ) public onlyOwner {
         LibPart.Part[] memory _royalties = new LibPart.Part[](1);
-        _royalties[0].value = _peercentageBasisPoints;
+        _royalties[0].value = _percentageBasisPoints;
         _royalties[0].account = _royaltiesRecipientAddress;
         _saveRoyalties(_tokenId, _royalties);
     }
@@ -32,6 +34,9 @@ contract AssetERC721 is ERC721, Ownable, RoyaltiesV2Impl {
         if (interfaceId == LibRoyaltiesV2._INTERFACE_ID_ROYALTIES) {
             return true;
         }
+      //  if -(interfaceId == _INTERFACE_ID_ERC2981) {
+      //      return true;
+      //  }
         return super.supportsInterface(interfaceId);
     }
 }

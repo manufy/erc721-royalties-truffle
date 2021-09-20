@@ -3,13 +3,21 @@
 Ethereum solidity ERC721 token sample
 ## prerequisites
 
+Install dependencies
+
+  - npm i
+
 Truffle compiler:
 
   - npm i -g truffle
 
-Openzeppelin smart contracts lib:
+Openzeppelin smart contracts lib: node_modules\@openzeppelin\contracts
 
   - download openzeppelin contracts https://docs.openzeppelin.com/contracts/4.x/
+
+Rarible protocol contracts: @rarible/royalties/contracts (update local if new version)
+
+  - https://github.com/rarible/protocol-contracts
 
 ## Compile smart contracts
 

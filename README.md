@@ -12,8 +12,9 @@ Truffle compiler:
   - npm i -g truffle
 
 Openzeppelin smart contracts lib: node_modules\@openzeppelin\contracts
+Download openzeppelin contracts https://docs.openzeppelin.com/contracts/4.x/
 
-  - download openzeppelin contracts https://docs.openzeppelin.com/contracts/4.x/
+  - npm install @openzeppelin/contracts
 
 Rarible protocol contracts: @rarible/royalties/contracts (update local if new version)
 
@@ -21,7 +22,9 @@ Rarible protocol contracts: @rarible/royalties/contracts (update local if new ve
 
 ## Compile smart contracts
 
-- truffle compile
+- truffle compile --reset 
+- migrate 
+- migrate --reset
 
 # Build and test ERC721 Ownable token
 
@@ -41,7 +44,7 @@ Rarible protocol contracts: @rarible/royalties/contracts (update local if new ve
 
  - let token_royalties = await AssetERC721.deployed();
  - token_royalties.mint(accounts[0])
- - token_royalties.setRoyalties(0,accounts[0],10000); -> 10% royalties
+ - token_royalties.setRoyalties(0,accounts[0],1000); -> 10% royalties
  - token_royalties.getRaribleV2Royalties(0);
  - token_royalties.supportsInterface("0xcad96cca")
 

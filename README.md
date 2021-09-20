@@ -1,6 +1,6 @@
 # ERC721 Token Ethereum Solidity Royalties
 
-Ethereum solidity ERC721 token sample
+Ethereum solidity ERC721 token sample https://www.youtube.com/watch?v=LHZC9wX3r0I
 ## prerequisites
 
 Install dependencies

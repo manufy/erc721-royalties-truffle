@@ -16,7 +16,7 @@ Download openzeppelin contracts https://docs.openzeppelin.com/contracts/4.x/
 
   - npm install @openzeppelin/contracts
 
-Rarible protocol contracts: @rarible/royalties/contracts (update local if new version)
+Rarible protocol contracts: @rarible/royalties/contracts (copy / update local if new version)
 
   - https://github.com/rarible/protocol-contracts
 

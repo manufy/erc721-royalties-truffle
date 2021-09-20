@@ -48,6 +48,16 @@ Rarible protocol contracts: @rarible/royalties/contracts (update local if new ve
  - token_royalties.getRaribleV2Royalties(0);
  - token_royalties.supportsInterface("0xcad96cca")
 
+# NFT Royalties Standard
+
  https://eips.ethereum.org/EIPS/eip-2981
+
+ - let token_royalties = await AssetERC721.deployed();
+ - token_royalties.mint(accounts[0])
+ - token_royalties.setRoyalties(0,accounts[0],1000); -> 10% royalties
+ - token_royalties.getRaribleV2Royalties(0)
+ - let result = await token_royalties.royaltyInfo(0, 1000000)
+ - result
+ - result[1].toString()
 
 
